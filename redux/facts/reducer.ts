@@ -3,10 +3,12 @@ import {
   FETCH_FACTS_SUCCESS,
   FETCH_FACTS_FAILURE,
   LOAD_MORE_FACTS,
-} from "./actionTypes";
-import { ActionsTypes } from "../types";
+  FactsState,
+  FactsActionsTypes,
+} from "./types";
+import { Reducer } from 'redux';
 
-const initialValues = {
+const initialValues: FactsState = {
   facts: [],
   selectedFacts: [],
   currentIndex: 3,
@@ -14,7 +16,8 @@ const initialValues = {
   error: false,
 };
 
-const factsReducer = (state = initialValues, action: ActionsTypes) => {
+
+const factsReducer: Reducer<FactsState, FactsActionsTypes> = (state = initialValues, action) => {
   switch (action.type) {
     case FETCH_FACTS_START:
       return {
@@ -33,13 +36,7 @@ const factsReducer = (state = initialValues, action: ActionsTypes) => {
       return {
         ...state,
         isLoading: false,
-        error: true,
-      };
-    case FETCH_FACTS_FAILURE:
-      return {
-        ...state,
-        isLoading: false,
-        error: true,
+        error: action.payload,
       };
     case LOAD_MORE_FACTS:
       return {

@@ -1,16 +1,22 @@
-import axios from "axios";
+import axios, { AxiosPromise } from 'axios';
 
-import { BASE_URL } from "./config";
+import { BASE_URL } from './config';
 
-const factsAPI = {
+interface factsAPIInterface {
+  getFacts: () => AxiosPromise
+}
+
+const factsAPI: factsAPIInterface = {
   getFacts: async () => {
     return await axios
       .get(`${BASE_URL}/api/facts`)
       .then((response) => {
         return response.data;
       })
-      .catch((error) => {});
-  },
+      .catch((error) => {
+        return error.response;
+      });
+  }
 };
 
 export default factsAPI;
