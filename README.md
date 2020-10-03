@@ -5,6 +5,5 @@ React native, typescript, Expo, Redux
 ## Installation
 
 run   **yarn && yarn start**  from the command line
+and open on ios simulator e.g
 
-## Errors
-There is type error in ListContainer which I can't  resolve yet

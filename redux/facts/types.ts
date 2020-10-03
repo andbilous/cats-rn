@@ -1,7 +1,7 @@
-export const FETCH_FACTS_START: string = "FETCH_FACTS_START";
-export const FETCH_FACTS_SUCCESS: string = "FETCH_FACTS_SUCCESS";
-export const FETCH_FACTS_FAILURE: string = "FETCH_FACTS_FAILURE";
-export const LOAD_MORE_FACTS: string = "LOAD_MORE_FACTS";
+export const FETCH_FACTS_START = "FETCH_FACTS_START";
+export const FETCH_FACTS_SUCCESS = "FETCH_FACTS_SUCCESS";
+export const FETCH_FACTS_FAILURE = "FETCH_FACTS_FAILURE";
+export const LOAD_MORE_FACTS = "LOAD_MORE_FACTS";
 import { AnyAction } from 'redux';
 
 export type Fact = {
@@ -35,5 +35,5 @@ export interface FactsState {
     selectedFacts: Fact[],
     currentIndex: number,
     isLoading: boolean,
-    error: boolean,
+    error: string | boolean,
 }

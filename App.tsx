@@ -1,6 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, TextInput, View,SafeAreaView,Button } from 'react-native';
-import List from './components/List'
+import { StyleSheet,SafeAreaView} from 'react-native';
 import ListContainer from './screens/ListContainer'
 import { Provider } from 'react-redux'
 import { store } from './redux/store'

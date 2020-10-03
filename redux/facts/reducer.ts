@@ -6,7 +6,7 @@ import {
   FactsState,
   FactsActionsTypes,
 } from "./types";
-import { Reducer } from 'redux';
+import { Reducer} from 'redux';
 
 const initialValues: FactsState = {
   facts: [],

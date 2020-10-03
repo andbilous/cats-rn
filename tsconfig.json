@@ -11,6 +11,6 @@
     },
     "exclude": ["__tests__/**/*-test.ts"],
     "parserOptions": {
-        "sourceType": "module"
-    }
+        "sourceType": "module",
+    },
 }
