@@ -1,4 +1,4 @@
-import axios, { AxiosPromise,AxiosInstance } from 'axios';
+import axios, { AxiosPromise} from 'axios';
 
 import { BASE_URL } from './config';
 import {Fact} from '../redux/facts/types'

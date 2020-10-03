@@ -8,6 +8,7 @@ export type Fact = {
     fact: string
 }
 
+
 interface FetchFactsStart extends AnyAction {
     type: typeof FETCH_FACTS_START;
 }

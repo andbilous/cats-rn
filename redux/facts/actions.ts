@@ -9,7 +9,8 @@ import {
 import factsAPI from "../../api";
 import { Dispatch } from "redux";
 
-export const fetchFacts = () => async (dispatch: Dispatch) => {
+export const fetchFacts:() => (dispatch: Dispatch) => Promise<void>
+ = () => async (dispatch: Dispatch) => {
   dispatch(fetchFactsStart());
   try {
     const res = await factsAPI.getFacts();
