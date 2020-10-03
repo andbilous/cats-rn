@@ -1,9 +1,10 @@
-import axios, { AxiosPromise } from 'axios';
+import axios, { AxiosPromise,AxiosInstance } from 'axios';
 
 import { BASE_URL } from './config';
+import {Fact} from '../redux/facts/types'
 
 interface factsAPIInterface {
-  getFacts: () => AxiosPromise
+  getFacts: () => AxiosPromise<Fact[]>
 }
 
 const factsAPI: factsAPIInterface = {

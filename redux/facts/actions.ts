@@ -3,7 +3,8 @@ import {
   FETCH_FACTS_SUCCESS,
   FETCH_FACTS_FAILURE,
   LOAD_MORE_FACTS,
-  FactsActionsTypes
+  FactsActionsTypes,
+  Fact
 } from "./types";
 import factsAPI from "../../api";
 import { Dispatch } from "redux";
@@ -22,7 +23,7 @@ const fetchFactsStart = (): FactsActionsTypes => ({
   type: FETCH_FACTS_START,
 });
 
-const fetchFactsSuccess = (data: []): FactsActionsTypes => ({
+const fetchFactsSuccess = (data: Fact[]): FactsActionsTypes => ({
   type: FETCH_FACTS_SUCCESS,
   payload: data,
 });
